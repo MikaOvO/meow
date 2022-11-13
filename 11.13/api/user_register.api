@@ -1,0 +1,11 @@
+type RegisterRequest {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+type RegisterResponse {
+	Result string `json:"result"`
+}
+service user-api {
+	@handler RegisterHandler
+	post /user/register(RegisterRequest) returns (RegisterResponse);
+}
