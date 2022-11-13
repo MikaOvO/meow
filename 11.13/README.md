@@ -31,6 +31,7 @@ go run user.go -f etc/user-api.yaml
 ```
 
 测试（需要curl）
+
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/93330615/201518297-9b4a5f83-f89e-4eac-9cb8-e212c4765af1.png">
 
 注意mongo中小写存储，bson.D查询需要小写key
