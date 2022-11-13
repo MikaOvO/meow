@@ -23,13 +23,15 @@ docker ps -a # 查看是否启动成功
 goctl api go -api ./api/main.api -dir .     
 ```
 
+添加./internal/logic下的逻辑
+
 启动服务
 ```
 go run user.go -f etc/user-api.yaml      
 ```
 
 测试（需要curl）
-
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/93330615/201518297-9b4a5f83-f89e-4eac-9cb8-e212c4765af1.png">
 
 注意mongo中小写存储，bson.D查询需要小写key
 
@@ -37,3 +39,4 @@ go run user.go -f etc/user-api.yaml
 
 * 代码相当冗余
 * 如何把mongo客户端连接部分拆分出来，在user.go中只启动k次（单例/连接池？）
+* 鉴权
